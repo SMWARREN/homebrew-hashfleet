@@ -8,7 +8,7 @@ cask "hashfleet" do
   homepage "https://hashfleet.app"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Hash Fleet.app"
 end

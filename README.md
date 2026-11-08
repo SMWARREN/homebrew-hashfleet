@@ -4,10 +4,21 @@ The Mac app and terminal CLI are separate downloads. Install either or both.
 These packages require Apple Silicon and macOS 14 (Sonoma) or later.
 Intel binaries are not provided in this release.
 
+## Add the project tap
+
+```sh
+brew tap smwarren/hashfleet
+```
+
+Homebrew 7 requires explicit trust for third-party packages. The trust commands
+below apply only to the selected package in this project tap. On older Homebrew
+versions without `brew trust`, omit those lines.
+
 ## Native Mac app only
 
 ```sh
-brew install --cask smwarren/hashfleet/hashfleet
+brew trust --cask smwarren/hashfleet/hashfleet
+brew install --cask hashfleet
 ```
 
 Installs `Hash Fleet.app`. It does not install the terminal command. If you
@@ -18,7 +29,8 @@ Choose one app distribution channel and preserve your existing data.
 ## Terminal CLI only
 
 ```sh
-brew install smwarren/hashfleet/hashfleet-cli
+brew trust --formula smwarren/hashfleet/hashfleet-cli
+brew install hashfleet-cli
 ```
 
 Installs the `hashfleet` command and its resource bundle, without installing
@@ -39,8 +51,8 @@ installed by either Homebrew package.
 - Website: https://hashfleet.app
 
 ```sh
-brew upgrade --cask smwarren/hashfleet/hashfleet
-brew upgrade smwarren/hashfleet/hashfleet-cli
+brew upgrade --cask hashfleet
+brew upgrade hashfleet-cli
 ```
 
 This is the project-maintained tap, not an assertion of inclusion in the

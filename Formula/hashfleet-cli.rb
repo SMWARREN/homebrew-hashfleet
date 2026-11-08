@@ -7,7 +7,9 @@ class HashfleetCli < Formula
 
   depends_on :macos
   depends_on arch: :arm64
-  depends_on macos: :sonoma
+  on_macos do
+    depends_on macos: :sonoma
+  end
 
   def install
     libexec.install "hashfleet", "GRDB_GRDB.bundle"
