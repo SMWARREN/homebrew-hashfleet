@@ -10,9 +10,13 @@ Intel binaries are not provided in this release.
 brew tap smwarren/hashfleet
 ```
 
-Homebrew 7 requires explicit trust for third-party packages. The trust commands
-below apply only to the selected package in this project tap. On older Homebrew
-versions without `brew trust`, omit those lines.
+Homebrew requires explicit trust for third-party packages by default starting
+with version 6. The trust commands below apply only to the selected package in
+this project tap. On older versions without `brew trust`, omit those lines.
+
+Official Homebrew catalog packages are trusted automatically. HashFleet uses
+this project-maintained tap until accepted into the official catalog. See the
+[official submission roadmap](https://github.com/SMWARREN/hashfleet/blob/main/docs/HOMEBREW.md#moving-into-the-official-homebrew-catalog).
 
 ## Native Mac app only
 
